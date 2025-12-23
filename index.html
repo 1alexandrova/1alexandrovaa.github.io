@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Здоровое питание | Полезные советы и рекомендации</title>
+    <link rel="icon" href="favicon.png" type="image/png">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- Шапка сайта -->
+<header>
+    <div class="container">
+        <div class="logo">Здоровое питание</div>
+        <nav role="navigation">
+            <ul class="menu-list">
+                <li><a href="#about">Советы</a></li>
+                <li><a href="#recipes">Рецепты</a></li>
+                <li><a href="#services">Услуги</a></li>
+                <li><a href="#testimonials">Отзывы</a></li>
+                <li><a href="#contact">Контакты</a></li>
+            </ul>
+            <div class="burger-menu" aria-label="Меню" tabindex="0" onkeydown="handleBurgerKeyDown(event)" onclick="toggleMenu()">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </nav>
+    </div>
+</header>
+
+<!-- Герой (Hero Section) -->
+<section class="hero-section" id="home">
+    <div class="container">
+        <h1>Сбалансированное и здоровое питание дома</h1>
+        <p>Получите доступ к полезным рецептам и индивидуальным планам питания</p>
+        <button class="btn btn-primary" data-modal-target="#subscriptionModal">Подписаться</button>
+    </div>
+</section>
+
+<!-- Советы по правильному питанию -->
+<section class="advice-section" id="about">
+    <div class="container">
+        <h2>Полезные советы</h2>
+        <div class="advice-grid">
+            <article class="advice-card">
+                <h3>Разнообразие продуктов</h3>
+                <p>Употребляйте разнообразные продукты, включайте овощи, фрукты, цельнозерновые продукты, белок и полезные жиры.</p>
+            </article>
+            <article class="advice-card">
+                <h3>Правильные порции</h3>
+                <p>Соблюдение умеренных порций помогает контролировать вес и поддерживать здоровый баланс питательных веществ.</p>
+            </article>
+            <article class="advice-card">
+                <h3>Режим приема пищи</h3>
+                <p>Принимайте пищу регулярно, распределяйте приемы еды равномерно в течение дня.</p>
+            </article>
+            <article class="advice-card">
+                <h3>Гидратация организма</h3>
+                <p>Обеспечивайте организм достаточным количеством воды ежедневно.</p>
+            </article>
+        </div>
+    </div>
+</section>
+
+<!-- Рецепты -->
+<section class="recipe-section" id="recipes">
+    <div class="container">
+        <h2>Популярные рецепты</h2>
+        <div class="slider-container">
+            <div class="slide-track">
+                <div class="slide">
+                    <img src="https://i.pinimg.com/736x/87/05/2c/87052c82b640c8d509dd320dd87ccfd0.jpg" alt="Салат с курицей">
+                    <h3>Куринный салат с авокадо</h3>
+                    <p>Легкий салат с белком и полезными жирами.</p>
+                </div>
+                <div class="slide">
+                    <img src="https://i.pinimg.com/originals/ea/9b/88/ea9b8886f2776ae22a082f4c47b1e0b5.png" alt="Тушеная говядина">
+                    <h3>Говяжье рагу с овощами</h3>
+                    <p>Источник белка и клетчатки.</p>
+                </div>
+                <div class="slide">
+                    <img src="https://i.pinimg.com/736x/42/5a/a2/425aa205d7f220008a143415feb761e3.jpg" alt="Макароны с овощами">
+                    <h3>Паста с овощами</h3>
+                    <p>Быстрое и вкусное решение.</p>
+                </div>
+                <div class="slide">
+                    <img src="https://avatars.mds.yandex.net/i?id=72efef765220e47721b5fa57683ea6820e90c260-5467645-images-thumbs&n=13" alt="Смузи">
+                    <h3>Зелёный смузи</h3>
+                    <p>Витаминный напиток для бодрости.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Услуги -->
+<section class="service-section" id="services">
+    <div class="container">
+        <h2>Наши услуги</h2>
+        <div class="service-cards">
+            <article class="service-card">
+                <h3>Индивидуальные программы питания</h3>
+                <p>Разработаем персональный рацион, подходящий именно Вам.</p>
+            </article>
+            <article class="service-card">
+                <h3>Консультации диетолога онлайн</h3>
+                <p>Получите консультацию специалиста дистанционно.</p>
+            </article>
+            <article class="service-card">
+                <h3>Доставка полезных блюд</h3>
+                <p>Заказывайте готовые блюда прямо домой.</p>
+            </article>
+        </div>
+    </div>
+</section>
+
+<!-- Отзывы клиентов -->
+<section class="testimonial-section" id="testimonials">
+    <div class="container">
+        <h2>Что говорят наши клиенты?</h2>
+        <div class="testimonials">
+            <blockquote class="testimonial">
+                <p>"Благодаря вашей программе питания моя фигура стала заметно стройнее."</p>
+                <cite>Анна Петровская</cite>
+            </blockquote>
+            <blockquote class="testimonial">
+                <p>"Приятно удивлена результатами — похудела на 5 кг всего за месяц!"</p>
+                <cite>Марина Ильинская</cite>
+            </blockquote>
+            <blockquote class="testimonial">
+                <p>"Очень вкусно и полезно, рекомендую всем своим друзьям!"</p>
+                <cite>Сергей Иванов</cite>
+            </blockquote>
+        </div>
+    </div>
+</section>
+
+<!-- Подвал (Footer) -->
+<footer class="site-footer" id="contact">
+    <div class="container">
+        <div class="footer-col">
+            <h3>Связаться с нами</h3>
+            <address>
+                Москва, ул. Красная площадь, д. 1<br>
+                Телефон: +7 (495) 123-45-67<br>
+                Email: info@zdorovoe-pitanie.ru
+            </address>
+        </div>
+        <div class="footer-col">
+            <h3>Социальные сети</h3>
+            <ul class="social-icons">
+                <li><a href="#" target="_blank"><i class="fab fa-facebook-square"></i></a></li>
+                <li><a href="#" target="_blank"><i class="fab fa-twitter-square"></i></a></li>
+                <li><a href="#" target="_blank"><i class="fab fa-instagram"></i></a></li>
+            </ul>
+        </div>
+        <div class="footer-col">
+            <h3>Новости и акции</h3>
+            <p>Подпишитесь на нашу рассылку и узнавайте первыми о новых акциях и предложениях.</p>
+            <form action="#" method="POST">
+                <input type="email" placeholder="Введите Ваш e-mail" required>
+                <button type="submit" class="btn btn-light">Подписаться</button>
+            </form>
+        </div>
+    </div>
+    <small>© 2025 Здоровое питание. Все права защищены.</small>
+</footer>
+
+<!-- Модальное окно подписки -->
+<div class="modal" id="subscriptionModal">
+    <div class="modal-content">
+        <span class="close-btn" data-modal-target="#subscriptionModal">×</span>
+        <h2>Подписка на рассылки</h2>
+        <form action="#" method="POST">
+            <label for="name">Ваше имя:</label>
+            <input type="text" id="name" name="name" required>
+            <label for="email">Адрес электронной почты:</label>
+            <input type="email" id="email" name="email" required>
+            <button type="submit" class="btn btn-success">Подписаться</button>
+        </form>
+    </div>
+</div>
+
+<script defer src="scripts.js"></script>
+</body>
+</html>

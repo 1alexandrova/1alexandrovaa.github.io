@@ -1,0 +1,354 @@
+css
+Копировать
+/* Reset стилей */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #fa9108;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.header {
+    background-color: #6aa84f;
+    padding: 1rem 0;
+}
+
+.logo {
+    font-size: 1.5rem;
+    color: #fff;
+    font-weight: bold;
+}
+
+.menu-list {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.menu-list > li {
+    margin-left: 1.5rem;
+}
+
+.menu-list > li > a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.menu-list > li > a:hover {
+    color: #ffc107;
+}
+
+.burger-menu {
+    display: none;
+    cursor: pointer;
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+}
+
+.bar {
+    width: 25px;
+    height: 3px;
+    background-color: #fff;
+    margin: 5px 0;
+    transition: 0.4s;
+}
+
+.change .bar:nth-child(1) {
+    transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.change .bar:nth-child(2) {
+    opacity: 0;
+}
+
+.change .bar:nth-child(3) {
+    transform: rotate(45deg) translate(-5px, -6px);
+}
+
+.btn {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn-primary {
+    background-color: #ffc107;
+    color: #fff;
+}
+
+.btn-primary:hover {
+    background-color: #eab308;
+}
+
+.btn-light {
+    background-color: transparent;
+    color: #6aa84f;
+    border: 2px solid #6aa84f;
+}
+
+.btn-light:hover {
+    background-color: #6aa84f;
+    color: #fff;
+}
+
+.btn-success {
+    background-color: #6aa84f;
+    color: #fff;
+}
+
+.btn-success:hover {
+    background-color: #5ca33d;
+}
+
+/* Hero Section */
+.hero-section {
+    background-image: url('https://img.goodfon.ru/wallpaper/nbig/1/7f/frukty-tsitrus-limon-apelsin-kivi-dolki-lemon-orange-kiwi.webp');
+    background-size: cover;
+    background-position: center;
+    height: 89vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #fff;
+}
+
+.hero-section h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.hero-section p {
+    font-size: 1.25rem;
+    margin-bottom: 2rem;
+}
+
+.advice-section {
+    padding: 5rem 0;
+    background-color: #fefbea;
+}
+
+.advice-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 2rem;
+}
+
+.advice-card {
+    background-color: #f89717;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.recipe-section {
+    padding: 5rem 0;
+    background-color: #ffe5b4;
+}
+
+.slider-container {
+    overflow: hidden;
+    position: relative;
+}
+
+.slide-track {
+    display: flex;
+    width: calc(4 * 1200px);
+    animation: slideAnimation 30s infinite linear;
+}
+
+.slide {
+    width: 500px;
+    margin-right: 1rem;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.service-section {
+    padding: 5rem 0;
+    background-color: #ffddac;
+}
+
+.service-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.service-card {
+    background-color: #9ce49c;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.testimonial-section {
+    padding: 5rem 0;
+    background-color: #ffebcd;
+}
+
+.testimonials {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.testimonial {
+    background-color: #76da76;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.site-footer {
+    background-color: #6aa84f;
+    color: #fff;
+    padding: 3rem 0;
+}
+
+.footer-col {
+    margin-bottom: 2rem;
+}
+
+.social-icons {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.social-icons > li {
+    margin-right: 1rem;
+}
+
+.social-icons > li > a {
+    color: #fff;
+    font-size: 1.5rem;
+    transition: color 0.3s ease;
+}
+
+.social-icons > li > a:hover {
+    color: #ffc107;
+}
+
+/* Modal Window */
+.modal {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(5px);
+    z-index: 1000;
+}
+
+.modal-content {
+    background-color: #fff;
+    max-width: 600px;
+    margin: 10% auto;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.close-btn {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+/* Responsive Design */
+@media (min-width: 1280px) {}
+
+@media (max-width: 1279px) {
+    .menu-list {
+        display: none;
+    }
+
+    .burger-menu {
+        display: block;
+    }
+
+    .change ~ .menu-list {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 5rem;
+        right: 1rem;
+        background-color: #6aa84f;
+        padding: 1rem;
+        border-radius: 5px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    }
+
+    .change ~ .menu-list > li {
+        margin-top: 1rem;
+    }
+
+    .change ~ .menu-list > li > a {
+        color: #fff;
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding: 0 10px;
+    }
+
+    .advice-grid,
+    .service-cards,
+    .testimonials {
+        grid-template-columns: 1fr;
+    }
+
+    .slider-container {
+        overflow-y: auto;
+        max-height: 300px;
+    }
+
+    .slide-track {
+        animation: none;
+    }
+}
+
+/* Animation for Slider */
+@keyframes slideAnimation {
+    0% { transform: translateX(calc(-300px * 0)); }
+    25% { transform: translateX(calc(-300px * 1)); }
+    50% { transform: translateX(calc(-300px * 2)); }
+    75% { transform: translateX(calc(-300px * 3)); }
+    100% { transform: translateX(calc(-300px * 0)); }
+}
+
+/* Parallelax effect */
+.parallax {
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 500px}
